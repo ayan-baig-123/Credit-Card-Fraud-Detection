@@ -241,16 +241,18 @@ if btn:
 
     with st.spinner("Analyzing Transaction Pattern... 🔍"):
 
-        prediction = model.predict([[
-            amount,
-            hour,
-            foreign,
-            location,
-            trust,
-            velocity,
-            age,
-            merchant_encoded
-        ]])
+       input_data = pd.DataFrame({
+    "amount": [amount],
+    "transaction_hour": [hour],
+    "foreign_transaction": [foreign],
+    "location_mismatch": [location],
+    "device_trust_score": [trust],
+    "velocity_24h": [velocity],
+    "cardholder_age": [age],
+    "merchant_category": [merchant_encoded]
+    })
+
+prediction = model.predict(input_data)
 
     st.write("")
 
