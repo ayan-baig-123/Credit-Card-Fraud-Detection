@@ -254,7 +254,7 @@ if btn:
 
     prediction = model.predict(input_data)
 
-st.write("")
+    st.write("")
 
     # =========================
     # RESULT UI
