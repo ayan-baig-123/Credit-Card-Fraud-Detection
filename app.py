@@ -252,9 +252,9 @@ if btn:
     "merchant_category": [merchant_encoded]
     })
 
-        prediction = model.predict(input_data)
+    prediction = model.predict(input_data)
 
-    st.write("")
+st.write("")
 
     # =========================
     # RESULT UI
